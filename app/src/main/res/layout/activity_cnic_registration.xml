@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Dashboard">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/SideBarDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/Toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSideBar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_sidebar_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Hazir Janab (VP)"
+                    android:textSize="28dp"
+                    android:includeFontPadding="false"/>
+
+
+                <ImageView
+                    android:id="@+id/ivSupport"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_support" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Toolbar">
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginVertical="10dp"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Initiate Registration"
+                    android:textSize="22dp" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rlCnicRegistrationTitle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginVertical="5dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvMsgPrompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/ivImageViewSelfie"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="Make sure your camera is clean and your id card is clearly readable."
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp">
+                        <ImageView
+                            android:id="@+id/ivCnicFront"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="Make sure your camera is clean!"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_driving_license" />
+                        <TextView
+                            android:id="@+id/tvCnicFront"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignBottom="@+id/ivCnicFront"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Front"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:id="@+id/ivCnicBack"
+                            android:layout_width="200dp"
+                            android:layout_height="200dp"
+                            android:layout_centerInParent="true"
+                            android:contentDescription="Make sure your camera is clean!"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/ic_driving_license" />
+                        <TextView
+                            android:id="@+id/tvCnicBack"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignBottom="@+id/ivCnicBack"
+                            android:fontFamily="@font/poppins_light"
+                            android:text="Back"
+                            android:textSize="18dp"
+                            android:gravity="center"
+                            android:textColor="@color/black"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvUploadMsgPrompt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_below="@+id/ivImageViewSelfie"
+                        android:fontFamily="@font/poppins_light"
+                        android:text="Click on the icons above, individually, to upload pictures of your ID Card"
+                        android:textSize="18dp"
+                        android:gravity="center"
+                        android:textColor="@color/black"/>
+
+                </LinearLayout>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/BtnNext"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Next"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:includeFontPadding="false"
+                android:background="@drawable/placeholder_grey_roundcorners"
+                android:backgroundTint="#161B21"/>
+    </RelativeLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</RelativeLayout>

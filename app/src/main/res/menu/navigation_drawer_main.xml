@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+    <item
+        android:id="@+id/main_item"
+        android:title="Menu">
+        <menu>
+            <item
+                android:id="@+id/iHome"
+                android:icon="@drawable/ic_home"
+                android:title="Home"
+                android:checkable="true" />
+            <item
+                android:id="@+id/iAcceptedServices"
+                android:icon="@drawable/ic_accept"
+                android:title="Accepted Services"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/iCompletedServices"
+                android:icon="@drawable/ic_completed"
+                android:title="Completed Services"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/iRewards"
+                android:icon="@drawable/ic_rewards"
+                android:title="Rewards"
+                android:checkable="true"/>
+            <item
+                android:id="@+id/iSupport"
+                android:icon="@drawable/ic_support"
+                android:title="Support"
+                android:checkable="true"/>
+
+        </menu>
+    </item>
+
+
+</menu>
+
+
+

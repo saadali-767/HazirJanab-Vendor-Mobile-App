@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "718426020705",
+    "firebase_url": "https://hazirjanab-b84ba-default-rtdb.firebaseio.com",
+    "project_id": "hazirjanab-b84ba",
+    "storage_bucket": "hazirjanab-b84ba.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:718426020705:android:0f46c8380a7f47f71b8320",
+        "android_client_info": {
+          "package_name": "com.example.hazirjanabvendorportal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDecJeIRG6RfR8Pi92kEOWV6ltk3DHDTvs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

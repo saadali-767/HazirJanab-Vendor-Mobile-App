@@ -1,0 +1,9 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background Color -->
+    <item android:drawable="@drawable/placeholder_grey_roundcorners_border" />
+
+    <!-- Arrow Indicator (transparent) -->
+    <item android:right="8dp">
+        <bitmap android:src="@drawable/ic_left_arrow" />
+    </item>
+</layer-list>

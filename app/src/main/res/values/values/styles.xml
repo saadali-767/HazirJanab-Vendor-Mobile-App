@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="NavigationDrawerText">
+        <item name="android:fontFamily">@font/poppins_regular</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:includeFontPadding">false</item>
+
+    </style>
+    <style name="RoundedCorners">
+        <item name="cornerSize">10dp</item>
+    </style>
+</resources>

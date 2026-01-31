@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Hazir Janab</string>
+    <string name="loading_lines">Loading...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="TitleService"><u>Service</u></string>
+    <string name="TitleProducts"><u>Products</u></string>
+</resources>

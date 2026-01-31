@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Dashboard">
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/SideBarDrawer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/Toolbar"
+                android:layout_height="?attr/actionBarSize"
+                android:layout_width="match_parent"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/ivSideBar"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="10dp"
+                    android:src="@drawable/ic_sidebar_2" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:text="Hazir Janab (VP)"
+                    android:textSize="28dp"
+                    android:includeFontPadding="false"/>
+
+
+                <ImageView
+                    android:id="@+id/ivSupport"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_support" />
+
+            </RelativeLayout>
+
+
+            <ScrollView
+                android:id="@+id/svScrollView"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/Toolbar">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/Toolbar"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginVertical="5dp"
+                    android:background="@drawable/placeholder_grey_roundcorners"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/ivRegistration"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:background="@color/white"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_register" />
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/ivRegistration"
+                        android:gravity="center"
+                        android:layout_marginVertical="10dp"
+                        android:fontFamily="@font/poppins_medium"
+                        android:text="Initiate Registration"
+                        android:textSize="22dp" />
+
+                    <TextView
+                        android:id="@+id/tvRegisterPrompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="10dp"
+                        android:layout_below="@+id/tvTitle"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="You have not yet registered for a category. Please register to proceed."
+                        android:textSize="16dp"
+                        android:gravity="center"/>
+
+                    <LinearLayout
+                        android:id="@+id/lltvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvRegisterPrompt"
+                        android:layout_marginBottom="10dp"
+                        android:gravity="center_vertical"
+                        android:weightSum="2.1">
+                        <TextView
+                            android:id="@+id/tvCategory"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/poppins_regular"
+                            android:text="Category: "
+                            android:textSize="18dp"/>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:paddingHorizontal="2dp"
+                            android:background="@drawable/placeholder_grey_roundcorners_border">
+                            <Spinner
+                                android:id="@+id/CategoryItems"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:layout_marginRight="2dp"
+                                android:paddingVertical="2dp"
+                                android:pointerIcon="arrow"
+                                android:spinnerMode="dropdown"
+                                android:fontFamily="@font/poppins_regular"
+                                android:text="Category: "
+                                android:textSize="18dp"
+                                android:backgroundTint="@color/black"
+                                android:popupBackground="@drawable/placeholder_grey_roundcorners_border"/>
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/servicesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/lltvCategory"/>
+
+
+                </RelativeLayout>
+            </ScrollView>
+
+            <LinearLayout
+                android:id="@+id/llBottomButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:gravity="center"
+                android:paddingVertical="2dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="horizontal">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnNext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/placeholder_grey_roundcorners"
+                    android:paddingHorizontal="24dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="Next"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/midnight_blue"/>
+            </LinearLayout>
+        </RelativeLayout>
+        <include layout="@layout/template_sidebar_drawer" />
+    </androidx.drawerlayout.widget.DrawerLayout>
+
+</RelativeLayout>
